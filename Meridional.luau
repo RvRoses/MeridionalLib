@@ -74,76 +74,69 @@ local function MakeGradient(color0, color1, rotation, parent)
 end
 
 --────────────────────────────────────────────────────────────────────────────────
--- THEME
+-- THEME (1:1 Primordial Theme Match)
 --────────────────────────────────────────────────────────────────────────────────
 local Theme = {
-    WindowBG          = Color3.fromRGB(14, 14, 16),
-    WindowBorder      = Color3.fromRGB(35, 35, 40),
-    TitleBar          = Color3.fromRGB(18, 18, 22),
-    TitleText         = Color3.fromRGB(255, 255, 255),
+    WindowBG          = Color3.fromRGB(18, 18, 22),
+    WindowBorder      = Color3.fromRGB(38, 32, 36),
+    TitleBar          = Color3.fromRGB(22, 22, 26),
+    TitleText         = Color3.fromRGB(240, 225, 230),
 
-    NavBG             = Color3.fromRGB(18, 18, 22),
-    NavItem           = Color3.fromRGB(200, 200, 210),
+    NavBG             = Color3.fromRGB(15, 15, 19),
+    NavItem           = Color3.fromRGB(160, 150, 155),
     NavItemActive     = Color3.fromRGB(255, 255, 255),
-    NavItemHover      = Color3.fromRGB(230, 230, 240),
-    NavSub            = Color3.fromRGB(130, 130, 145),
-    NavIndicator      = Color3.fromRGB(100, 149, 237),
+    NavItemHover      = Color3.fromRGB(210, 195, 200),
+    NavSub            = Color3.fromRGB(110, 100, 105),
+    NavIndicator      = Color3.fromRGB(215, 140, 160), -- Primordial Rose Pink
 
-    TabBG             = Color3.fromRGB(22, 22, 26),
+    TabBG             = Color3.fromRGB(20, 20, 24),
     TabActive         = Color3.fromRGB(255, 255, 255),
-    TabInactive       = Color3.fromRGB(120, 120, 130),
-    TabUnderline      = Color3.fromRGB(100, 149, 237),
+    TabInactive       = Color3.fromRGB(110, 100, 105),
+    TabUnderline      = Color3.fromRGB(215, 140, 160),
 
-    PanelBG           = Color3.fromRGB(20, 20, 24),
-    SectionBG         = Color3.fromRGB(26, 26, 30),
-    SectionHeader     = Color3.fromRGB(180, 180, 195),
-    SectionBorder     = Color3.fromRGB(38, 38, 46),
+    SectionBG         = Color3.fromRGB(24, 24, 29),
+    SectionHeader     = Color3.fromRGB(220, 220, 225),
+    SectionBorder     = Color3.fromRGB(48, 40, 45), -- Rose-tinted dark border
 
-    TextPrimary       = Color3.fromRGB(230, 230, 240),
-    TextSecondary     = Color3.fromRGB(130, 130, 145),
-    TextDisabled      = Color3.fromRGB(70, 70, 80),
+    TextPrimary       = Color3.fromRGB(220, 215, 220),
+    TextSecondary     = Color3.fromRGB(120, 110, 115),
 
-    Accent            = Color3.fromRGB(100, 149, 237),
-    AccentHover       = Color3.fromRGB(120, 165, 255),
-    AccentDim         = Color3.fromRGB(50, 75, 120),
+    Accent            = Color3.fromRGB(215, 140, 160),
+    AccentHover       = Color3.fromRGB(230, 155, 175),
 
-    ToggleOff         = Color3.fromRGB(55, 55, 65),
-    ToggleOn          = Color3.fromRGB(100, 149, 237),
-    ToggleKnob        = Color3.fromRGB(255, 255, 255),
-
-    SliderBG          = Color3.fromRGB(40, 40, 50),
-    SliderFill        = Color3.fromRGB(100, 149, 237),
-    SliderKnob        = Color3.fromRGB(255, 255, 255),
-
-    DropdownBG        = Color3.fromRGB(28, 28, 34),
-    DropdownBorder    = Color3.fromRGB(45, 45, 55),
-    DropdownHover     = Color3.fromRGB(38, 38, 50),
-    DropdownIcon      = Color3.fromRGB(130, 130, 150),
-
-    ButtonBG          = Color3.fromRGB(35, 35, 45),
-    ButtonHover       = Color3.fromRGB(50, 80, 140),
-    ButtonActive      = Color3.fromRGB(100, 149, 237),
-    ButtonText        = Color3.fromRGB(210, 210, 220),
-
-    InputBG           = Color3.fromRGB(28, 28, 34),
-    InputBorder       = Color3.fromRGB(45, 45, 55),
-    InputText         = Color3.fromRGB(220, 220, 230),
-    InputPlaceholder  = Color3.fromRGB(90, 90, 105),
-
-    CheckboxOff       = Color3.fromRGB(40, 40, 50),
-    CheckboxOn        = Color3.fromRGB(100, 149, 237),
+    -- Checkbox / Toggle Style matching Primordial checkboxes
+    CheckboxOff       = Color3.fromRGB(30, 30, 36),
+    CheckboxOn        = Color3.fromRGB(215, 140, 160),
     CheckmarkColor    = Color3.fromRGB(255, 255, 255),
 
-    Divider           = Color3.fromRGB(38, 38, 46),
+    SliderBG          = Color3.fromRGB(32, 32, 38),
+    SliderFill        = Color3.fromRGB(215, 140, 160),
+    SliderKnob        = Color3.fromRGB(255, 255, 255),
 
-    CornerWindow      = 8,
-    CornerSection     = 6,
-    CornerControl     = 4,
-    CornerToggle      = 10,
-    ControlHeight     = 28,
-    FontSize          = 13,
-    FontSizeSmall     = 11,
-    FontSizeLarge     = 15,
+    DropdownBG        = Color3.fromRGB(28, 28, 35),
+    DropdownBorder    = Color3.fromRGB(50, 42, 48),
+    DropdownHover     = Color3.fromRGB(36, 36, 44),
+    DropdownIcon      = Color3.fromRGB(140, 120, 130),
+
+    ButtonBG          = Color3.fromRGB(32, 32, 40),
+    ButtonHover       = Color3.fromRGB(55, 42, 48),
+    ButtonActive      = Color3.fromRGB(215, 140, 160),
+    ButtonText        = Color3.fromRGB(225, 220, 225),
+
+    InputBG           = Color3.fromRGB(28, 28, 35),
+    InputBorder       = Color3.fromRGB(50, 42, 48),
+    InputText         = Color3.fromRGB(230, 225, 230),
+    InputPlaceholder  = Color3.fromRGB(90, 80, 85),
+
+    Divider           = Color3.fromRGB(44, 36, 42),
+
+    CornerWindow      = 4,
+    CornerSection     = 3,
+    CornerControl     = 3,
+    ControlHeight     = 26,
+    FontSize          = 12,
+    FontSizeSmall     = 10,
+    FontSizeLarge     = 14,
 }
 
 local function ApplyTheme(overrides)
